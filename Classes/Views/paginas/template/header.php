@@ -15,7 +15,7 @@
 
 	<title>Eagle Care</title>
 
-	<!-- ================= meta-tags ========================= -->
+	<!-- ================= meta-tags ===================== -->
 
 	<!-- responsivo -->
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
@@ -37,5 +37,7 @@
 	<base base="<?php echo CAMINHO; ?>" />
 
 	<header>
-		header
+		<div class="container">
+			
+		</div><!-- container -->
 	</header>

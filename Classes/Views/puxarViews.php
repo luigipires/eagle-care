@@ -7,8 +7,8 @@
 		private static $headerPainel = 'paginas/template/headerPainel.php';
 		private static $login = 'paginas/template/login.php';
 		private static $footer = 'paginas/template/footer.php';
-		private static $footerPainel = 'paginas/template/engines/footerPainel.php';
-		private static $modais = 'paginas/template/engines/modais.php';
+		private static $footerPainel = 'paginas/template/footerPainel.php';
+		private static $modais = 'paginas/template/painel/modais.php';
 
 		public static function renderizar($caminhoPagina,$data = null,$anotherData = null){
 			$header = self::$header;
@@ -16,7 +16,7 @@
 			$footer = self::$footer;
 
 			include($header);
-			// include($login);
+			include($login);
 			include('paginas/'.$caminhoPagina.'.php');
 			include($footer);
 			die();
@@ -40,7 +40,7 @@
 			$footer = self::$footer;
 
 			include($header);
-			// include($login);
+			include($login);
 			include('paginas/erro/'.$pagina.'.php');
 			include($footer);
 			die();
