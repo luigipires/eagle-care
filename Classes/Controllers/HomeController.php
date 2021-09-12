@@ -16,7 +16,7 @@
 
 		public function index(){
 			if(!isset($_SESSION['login'])){
-				puxarViews::renderizar('inicio/home');
+				puxarViews::renderizar('tela_inicial/home');
 			}
 
 			$data = PostagensModel::dataFriends();

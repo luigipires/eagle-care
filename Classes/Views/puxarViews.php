@@ -16,7 +16,7 @@
 			$footer = self::$footer;
 
 			include($header);
-			include($login);
+			// include($login);
 			include('paginas/'.$caminhoPagina.'.php');
 			include($footer);
 			die();
@@ -40,7 +40,7 @@
 			$footer = self::$footer;
 
 			include($header);
-			include($login);
+			// include($login);
 			include('paginas/erro/'.$pagina.'.php');
 			include($footer);
 			die();
