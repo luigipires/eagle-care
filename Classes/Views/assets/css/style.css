@@ -4,10 +4,267 @@
 	box-sizing: border-box;
 	text-decoration: none;
 	list-style-type: none;
+	font-family: 'Lato', sans-serif;
 }
 html,body{
 	height: 100%;
 }
 
 /**************** header ********************/
+
+header{
+	background-color: #02733E;
+}
+header .container{
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px 3%;
+	align-items: center;
+}
+header .container .logo,
+header .container .menu-desktop,
+header .container .menu-mobile{
+	width: 50%;
+}
+header .container .logo a h1{
+	color: #DCF0F2;
+	font-size: 30px;
+}
+
+/*====== menu desktop ======*/
+
+header .container .menu-desktop ul{
+	text-align: right;
+}
+header .container .menu-desktop ul li{
+	display: inline-block;
+	margin: 0 10px;
+}
+header .container .menu-desktop ul li a{
+	font-size: 17px;
+	color: #DCF0F2;
+}
+header .container .menu-desktop ul li a:hover{
+	text-decoration: underline;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/*====== menu mobile ======*/
+
+header .container .menu-mobile{
+	text-align: right;
+	display: none;
+}
+header .container .menu-mobile h3{
+	font-size: 40px;
+	display: inline-block;
+	color: #DCF0F2;
+	cursor: pointer;
+	border: 3px solid #DCF0F2;
+	border-radius: 10px;
+	padding: 5px 10px;
+}
+
+.corpo-menu-mobile{
+	background-color: #038C4C;
+	width: 100%;
+	display: none;
+}
+.corpo-menu-mobile nav ul{
+	text-align: center;
+}
+.corpo-menu-mobile nav ul li{
+	padding: 15px 0;
+}
+.corpo-menu-mobile nav ul li:hover{
+	background-color: rgb(3, 160, 86);
+}
+.corpo-menu-mobile nav ul li a{
+	color: #DCF0F2;
+	font-size: 17px;
+}
+[login]{
+	cursor: pointer;
+}
+
+/**************** login ********************/
+
+.fundo-transparente{
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	top: 0;
+	height: 100%;
+	display: none;
+	padding: 80px 50px;
+}
+.fundo-branco{
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: white;
+	border-radius: 8px;
+	min-height: 350px;
+	position: relative;
+	padding: 20px 10px 30px 10px;
+	box-shadow: 15px 15px 30px 4px rgb(10, 10, 10);
+}
+.fechar-janela{
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	right: -15px;
+	top: -15px;
+}
+.fechar-janela>img{
+	max-width: 100%;
+	cursor: pointer;
+}
+.login{
+	max-width: 500px;
+	margin: 0 auto;
+}
+.login>div{
+	padding: 10px 0;
+}
+.login>div>h2{
+	text-align: center;
+	font-size: 21px;
+	font-weight: normal;
+	color: #02733E;
+}
+.line{
+	height: 5px;
+	width: 100%;
+	background-color: #02733E;
+	margin: 15px auto 10px auto;
+}
+.login>form>div{
+	padding: 10px 0;
+}
+.login>form>div>p{
+	font-size: 17px;
+	color: #02733E;
+	text-align: center;
+	padding-bottom: 5px;
+}
+.login>form>div>input[type=text]{
+	outline: 0;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	height: 40px;
+	border: 2px solid #02733E;
+	border-radius: 5px;
+	padding: 0 10px;
+}
+.login>form>div>input[type=email]{
+	outline: 0;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	height: 40px;
+	border: 2px solid #02733E;
+	border-radius: 5px;
+	padding: 0 10px;
+}
+.login>form>div>input[type=password]{
+	outline: 0;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	height: 40px;
+	border: 2px solid #02733E;
+	border-radius: 5px;
+	padding: 0 10px;
+}
+.login>form>div>input[type=submit]{
+	outline: 0;
+	width: 200px;
+	display: block;
+	margin: 10px auto 0 auto;
+	height: 40px;
+	cursor: pointer;
+	background-color: #02733E;
+	border: 0;
+	border-bottom: 5px solid rgb(3, 100, 36);
+	border-radius: 5px;
+	color: #DCF0F2;
+	font-size: 15px;
+}
+.login>form>div>input[type=submit]:hover{
+	border: 0;
+	background-color: rgb(3, 160, 86);
+}
+.opcoes-tela-branca{
+	max-width: 500px;
+	margin: 0 auto;
+}
+.opcao-cadastro{
+	padding-top: 10px;
+	text-align: center;
+}
+.opcao-cadastro>h2{
+	font-size: 17px;
+	color: #02733E;
+}
+.opcao-cadastro>a{
+	color: #DCF0F2;
+	background-color: #02733E;
+	padding: 10px 15px;
+	font-size: 15px;
+	display: inline-block;
+	border-radius: 5px;
+	margin-top: 15px;
+}
+.opcao-cadastro>a:hover{
+	background-color: rgb(3, 160, 86);
+}
+
+.senha{
+	position: relative;
+}
+.mostrar-senha{
+	position: absolute;
+	right: 10px;
+	top: 37.5px;
+}
+.mostrar-senha>h3{
+	color: #02733E;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+/**************** footer ********************/
+
+footer{
+	background-color: #02733E;
+	padding: 20px 15px;
+}
+footer .container{
+	max-width: 1100px;
+	margin: 0 auto;
+}
+footer .container>h2{
+	font-size: 20px;
+	color: #DCF0F2;
+	text-align: center;
+	font-weight: lighter;
+}
+
+
+/*************************************************/
+/*************** responsivo **********************/
+
+@media screen and (max-width: 768px){
+	header .container .menu-desktop{
+		display: none;
+	}
+	header .container .menu-mobile{
+		display: block;
+	}
+}
 

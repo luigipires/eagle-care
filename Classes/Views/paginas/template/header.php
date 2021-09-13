@@ -8,8 +8,9 @@
 
 	<!-- links -->
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="<?php echo ASSETS; ?>css/style.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo ASSETS; ?>css/styleError.css">
 
@@ -38,6 +39,36 @@
 
 	<header>
 		<div class="container">
-			
+			<div class="logo">
+				<a href="<?php echo CAMINHO; ?>">
+					<h1>EAGLECARE</h1>
+				</a>
+			</div><!-- logo -->
+
+			<nav class="menu-desktop">
+				<ul>
+					<li><a href="<?php echo CAMINHO; ?>">Home</a></li>
+					<li><a href="<?php echo CAMINHO; ?>">Home</a></li>
+					<li><a href="<?php echo CAMINHO; ?>">Home</a></li>
+					<li><a login>Entrar</a></li>
+				</ul>
+			</nav><!-- menu-desktop -->
+
+			<nav class="menu-mobile">
+				<h3><i class="fas fa-bars"></i></h3>
+			</nav><!-- menu-mobile -->
 		</div><!-- container -->
 	</header>
+
+	<section>
+		<div class="corpo-menu-mobile">
+			<nav>
+				<ul>
+					<li><a href="<?php echo CAMINHO; ?>">Home</a></li>
+					<li><a href="<?php echo CAMINHO; ?>">Home</a></li>
+					<li><a href="<?php echo CAMINHO; ?>">Home</a></li>
+					<li><a login>Entrar</a></li>
+				</ul>
+			</nav>
+		</div><!-- corpo-menu-mobile -->
+	</section>
