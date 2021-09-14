@@ -2,7 +2,7 @@
 	use Classes\Metodos;
 ?>
 <section>
-	<div class="fundo-transparente tela-login">
+	<div class="tela-login">
 		<div class="fundo-branco">
 			<div class="login">
 				<div>
@@ -43,5 +43,5 @@
 				<img src="<?php echo ASSETS; ?>imagens/x.png">
 			</div><!-- fechar-janela -->
 		</div><!-- fundo-branco -->
-	</div><!-- fundo-transparente -->
+	</div><!-- tela-login -->
 </section>

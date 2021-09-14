@@ -101,3 +101,16 @@ function fadeIn(element, display){
         }
     })();
 };
+
+/********************************************/
+// hover em javascript puro
+
+function hover(element, element2){
+    element.addEventListener('mouseover', () => {
+        fadeIn(element2);
+    }, false);
+
+    element.addEventListener('mouseout', () => {
+        fadeOut(element2);
+    }, false);
+}

@@ -59,7 +59,7 @@ header .container .menu-mobile{
 	display: none;
 }
 header .container .menu-mobile h3{
-	font-size: 40px;
+	font-size: 30px;
 	display: inline-block;
 	color: #DCF0F2;
 	cursor: pointer;
@@ -92,7 +92,7 @@ header .container .menu-mobile h3{
 
 /**************** login ********************/
 
-.fundo-transparente{
+.tela-login{
 	background-color: rgba(0, 0, 0, 0.5);
 	position: fixed;
 	z-index: 1;
@@ -238,23 +238,265 @@ header .container .menu-mobile h3{
 	cursor: pointer;
 }
 
+/**************** banner cadastro ********************/
+
+.banner-cadastro{
+	background-image: url('../imagens/bannercadastro.jpg');
+	background-position: center;
+	background-size: 100% 100%;
+	width: 100%;
+	min-height: 420px;
+	position: relative;
+}
+.banner-cadastro>.fundo-transparente{
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 50px;
+}
+.banner-cadastro>.fundo-transparente>.container{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.banner-cadastro>.fundo-transparente>.container>.texto-banner>h2{
+	font-size: 50px;
+	color: #DCF0F2;
+}
+.banner-cadastro>.fundo-transparente>.container>.texto-banner>h4{
+	font-size: 25px;
+	color: #DCF0F2;
+}
+.banner-cadastro>.fundo-transparente>.container>.texto-banner>h4:nth-of-type(1){
+	padding-top: 35px;
+}
+.banner-cadastro>.fundo-transparente>.container>.texto-banner>a{
+	font-size: 17px;
+	background-color: #F24405;
+	color: #DCF0F2;
+	border-radius: 5px;
+	margin-top: 15px;
+	border: 0;
+	max-width: 263px;
+	text-align: center;
+	display: block;
+	padding: 10px;
+}
+.banner-cadastro>.fundo-transparente>.container>.texto-banner>a:hover{
+	background-color: #F15319;
+}
+
+/**************** cadastro ********************/
+
+.cadastro .container{
+	max-width: 1100px;
+	margin: 0 auto;
+	min-height: 503px;
+}
+.form-cadastro{
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 40px;
+}
+.form-cadastro>div>h2{
+	font-size: 24px;
+	text-align: center;
+	color: #02733E;
+	text-decoration: underline;
+}
+.form-cadastro>form{
+	padding-top: 30px;
+}
+.form-cadastro>form>div{
+	padding: 15px 0;
+}
+.form-cadastro>form>div>p{
+	text-align: center;
+	color: #02733E;
+	font-size: 17px;
+	padding-bottom: 10px;
+}
+.tooltip{
+	padding-bottom: 10px;
+	text-align: center;
+	position: relative;
+}
+.tooltip>h3{
+	display: inline-block;
+	color: black;
+	font-size: 15px;
+	cursor: pointer;
+}
+.tooltip>h3:hover{
+	color: rgb(30, 30, 30);
+}
+.tooltip>p{
+	display: inline-block;
+	color: #02733E;
+	font-size: 17px;
+	padding-right: 3px;
+}
+.text-tooltip{
+	position: absolute;
+	display: inline-block;
+	top: -60px;
+	text-align: center;
+}
+.text-tooltip>div{
+	position: absolute;
+	left: -5px;
+	display: none;
+	background-color: black;
+	padding: 10px 15px;
+	border-radius: 5px;
+	z-index: 1;
+	width: 200px;
+}
+.text-tooltip>div>p{
+	font-size: 13px;
+	text-align: justify;
+	color: white;
+}
+.form-cadastro>form>div>input[type=text]{
+	outline: 0;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	height: 40px;
+	border: 2px solid #02733E;
+	border-radius: 5px;
+	padding: 0 10px;
+}
+.form-cadastro>form>div>input[type=email]{
+	outline: 0;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	height: 40px;
+	border: 2px solid #02733E;
+	border-radius: 5px;
+	padding: 0 10px;
+}
+.form-cadastro>form>div>input[type=password]{
+	outline: 0;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	height: 40px;
+	border: 2px solid #02733E;
+	border-radius: 5px;
+	padding: 0 10px;
+}
+.form-cadastro>form>div>label{
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	cursor: pointer;
+	background-color: #02733E;
+	border-radius: 5px;
+	border: 0;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	font-size: 17px;
+}
+.form-cadastro>form>div>label:hover{
+	background-color: rgb(3, 160, 86);
+}
+.form-cadastro>form>div>input[type=file]{
+	display: none;
+}
+.form-cadastro>form>div>input[type=submit]{
+	outline: 0;
+	width: 250px;
+	display: block;
+	margin: 10px auto 0 auto;
+	height: 45px;
+	cursor: pointer;
+	background-color: #02733E;
+	border-radius: 5px;
+	border: 0;
+	color: #FFF6E6;
+	font-size: 17px;
+}
+.form-cadastro>form>div>input[type=submit]:hover{
+	background-color: rgb(3, 160, 86);
+}
+
+.form-cadastro>form>div .mostrar-senha{
+	top: 47.5px;
+}
+
 /**************** footer ********************/
 
 footer{
 	background-color: #02733E;
 	padding: 20px 15px;
 }
-footer .container{
+footer>.container{
 	max-width: 1100px;
 	margin: 0 auto;
 }
-footer .container>h2{
+footer>.container>h2{
 	font-size: 20px;
 	color: #DCF0F2;
 	text-align: center;
 	font-weight: lighter;
 }
 
+/**************** mensagens de feedback ********************/
+
+.sucesso-mensagem{
+	background-color: #009644;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	padding: 10px !important;
+	border: 3px solid #62cc9c;
+	border-radius: 5px;
+}
+.sucesso-mensagem>h3{
+	font-size: 20px;
+	display: inline-block;
+	padding-right: 6px;
+	color: #FFF6E6;
+}
+.sucesso-mensagem>h2{
+	font-size: 17px;
+	display: inline-block;
+	color: #FFF6E6;
+	padding-bottom: 0 !important;
+}
+.erro-mensagem{
+	background-color: #e23637;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	padding: 10px !important;
+	border: 3px solid #e38384;
+	border-radius: 5px;
+}
+.erro-mensagem>h3{
+	font-size: 20px;
+	display: inline-block;
+	padding-right: 6px;
+	color: #FFF6E6;
+}
+.erro-mensagem>h2{
+	font-size: 17px;
+	display: inline-block;
+	color: #FFF6E6;
+	padding-bottom: 0 !important;
+}
+.alerta-mensagem{
+	background-color: #f9ab24;
+	width: 100%;
+	text-align: center;
+	padding: 10px !important;
+	margin: 0 auto;
+	border: 3px solid #fbcd8a;
+	border-radius: 5px;
+}
 
 /*************************************************/
 /*************** responsivo **********************/
@@ -266,5 +508,50 @@ footer .container>h2{
 	header .container .menu-mobile{
 		display: block;
 	}
+	footer .container>h2{
+		font-size: 15px;
+	}
+	.fundo-transparente{
+		padding: 60px 50px;
+	}
 }
 
+@media screen and (max-width: 645px){
+	.login,
+	.opcoes-tela-branca{
+		padding: 0 35px;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.text-tooltip{
+		width: 100%;
+		margin: 0 auto;
+		top: -55px;
+		display: block;
+	}
+	.text-tooltip>div{
+		width: 100%;
+		left: 0;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 445px){
+	.alerta-mensagem>h3,
+	.sucesso-mensagem>h3,
+	.erro-mensagem>h3{
+		padding-right: 0;
+		padding-bottom: 5px;
+		font-size: 23px;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 420px){
+	.form-cadastro>form>div>input[type=submit],
+	.login>form>div>input[type=submit],
+	.contato .container form div input[type=submit]{
+		width: 100%;
+	}
+}

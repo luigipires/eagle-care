@@ -2,7 +2,10 @@ abrirMenuMobile();
 abrirModalLogin();
 fecharModalLogin();
 mostrarSenha();
+uploadArquivos();
+tooltip();
 
+//================================================================
 // =============> abre o menu mobile
 
 function abrirMenuMobile(){
@@ -14,6 +17,7 @@ function abrirMenuMobile(){
 	});
 }
 
+//================================================================
 // =============> abre e fecha modal de login
 
 function abrirModalLogin(){
@@ -46,6 +50,7 @@ function fecharModalLogin(){
 	}
 }
 
+//================================================================
 // =============> mostrar e ocultar senha
 
 function mostrarSenha(){
@@ -67,4 +72,28 @@ function mostrarSenha(){
 			}
 		});
 	}
+}
+
+//================================================================
+// =============> pegando valor do input file e mandando para a label
+
+function uploadArquivos(){
+	let inputFile = document.querySelector('input[id=foto]');
+	let label = document.querySelector('label[for=foto]');
+
+	if(inputFile){
+		inputFile.addEventListener('change', (e) => {
+			label.textContent = e.target.value.split('\\').pop();
+		});
+	}
+}
+
+//================================================================
+// =============> hover do tooltip
+
+function tooltip(){
+	let tooltip = document.querySelector('.tooltip>h3');
+	let texto_tooltip = document.querySelector('.text-tooltip>div');
+
+	hover(tooltip,texto_tooltip);
 }

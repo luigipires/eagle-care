@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo ASSETS; ?>css/style.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo ASSETS; ?>css/styleError.css">
 
-	<title>Eagle Care</title>
+	<title>EagleCare</title>
 
 	<!-- ================= meta-tags ===================== -->
 
@@ -41,7 +41,7 @@
 		<div class="container">
 			<div class="logo">
 				<a href="<?php echo CAMINHO; ?>">
-					<h1>EAGLECARE</h1>
+					<h1><i>EAGLECARE</i></h1>
 				</a>
 			</div><!-- logo -->
 
