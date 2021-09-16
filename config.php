@@ -15,4 +15,12 @@
 	define('DATABASE','eagle_care');
 	define('USER','root');
 	define('PASSWORD','');
+
+	//==================================================================
+	//includes
+
+	include('Classes/MySql.php');
+	include('Classes/Metodos.php');
+	include('Classes/Models/UsuariosModel.php');
+	include('Classes/Bcrypt.php');
 ?>

@@ -10,6 +10,10 @@
 			die();
 		}
 
+		public static function converterMoeda($valor){
+			return number_format($valor, 2, ',', '.');
+		}
+
 		public static function mensagem($resposta,$mensagem){
 			if($resposta == 'sucesso'){
 				echo '<div class="sucesso-mensagem">
@@ -38,54 +42,6 @@
 				}else{
 					return false;
 				}
-			}else{
-				return false;
-			}
-		}
-
-		public static function validateFile($arquivo){
-			//mime-types dos arquivos
-			$javascript = 'application/javascript';
-			$java = 'application/java-archive';
-			$html = 'text/html';
-			$css = 'text/css';
-			$typescript = 'application/typescript';
-			$json = 'application/json';
-        	$xml = 'application/xml';
-
-			//tamanho máximo para arquivo
-			$tamanho = 1024 * 4;
-
-			if(self::validateImage($arquivo) == true){
-				return false;
-			}else{
-				if($arquivo['type'] == $json || $arquivo['type'] == $xml || $arquivo['type'] == $javascript || $arquivo['type'] == $html || $arquivo['type'] == $java || $arquivo['type'] == $css || $arquivo['type'] == $typescript){
-					return false;
-				}else{
-					if($arquivo['size'] > intval($tamanho)){
-						return false;
-					}else{
-						return true;
-					}
-				}
-			}
-		}
-
-		public static function uploadFile($arquivo,$pasta,$nomePasta){
-			$formatoarquivo = explode('.',$arquivo['name']);
-			$arquivonome = uniqid().'.'.$formatoarquivo[count($formatoarquivo) - 1];
-
-			$files = dirname(__FILE__).ARQUIVOS.$pasta.'/'.$nomePasta;
-
-			if(file_exists($files)){
-				$upload = dirname(__FILE__).ARQUIVOS.$pasta.'/'.$nomePasta.'/';
-			}else{
-				mkdir($files,0777,true);
-				$upload = dirname(__FILE__).ARQUIVOS.$pasta.'/'.$nomePasta.'/';
-			}
-
-			if(move_uploaded_file($arquivo['tmp_name'],$upload.=$arquivonome)){
-				return $arquivonome;
 			}else{
 				return false;
 			}
@@ -149,7 +105,7 @@
 			// setcookie('lembrar-senha',true,time() - 1,'/');
 			session_unset();
 			session_destroy();
-			self::redirecionar(PATH);
+			self::redirecionar(CAMINHO);
 		}
 
 		public static function pathFolder(){

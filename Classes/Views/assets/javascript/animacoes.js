@@ -81,9 +81,11 @@ function fadeOut(element){
 
     (function fade(){
         if((element.style.opacity -= .1) < 0){
-          element.style.display = "none";
+            // element.style.transitionProperty = 'display';
+            // element.style.transitionDuration = '3000ms';
+            element.style.display = "none";
         }else{
-          requestAnimationFrame(fade);
+            requestAnimationFrame(fade);
         }
     })();
 };
@@ -106,11 +108,13 @@ function fadeIn(element, display){
 // hover em javascript puro
 
 function hover(element, element2){
-    element.addEventListener('mouseover', () => {
-        fadeIn(element2);
-    }, false);
+    if(element && element2){
+        element.addEventListener('mouseover', () => {
+            fadeIn(element2);
+        }, false);
 
-    element.addEventListener('mouseout', () => {
-        fadeOut(element2);
-    }, false);
+        element.addEventListener('mouseout', () => {
+            fadeOut(element2);
+        }, false);
+    }
 }

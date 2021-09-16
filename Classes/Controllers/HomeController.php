@@ -6,20 +6,20 @@
 	use Classes\MySql;
 	
 	use Classes\Models\UsuariosModel;
+	use Classes\Models\HomeModel;
 
 	class HomeController{
 
-		//nome da pastas
+		//nome das pastas
 		private static $usuarios = 'usuarios';
 
 		public function index(){
-			if(!isset($_SESSION['login'])){
-				puxarViews::renderizar('tela_inicial/home');
-			}
-
 			self::deslogar();
+			self::carrinho();
 
-			puxarViews::renderizarPainel('painel/home');
+			$itens = HomeModel::itensFarmacia();
+
+			puxarViews::renderizar('tela_inicial/home',$itens);
 		}
 
 		//desloga da conta
@@ -27,6 +27,24 @@
 			if(isset($_GET['sair'])){
 				Metodos::logout();
 			}
+		}
+
+		//retém informãções da cesta de compras
+		private static function carrinho(){
+			if(isset($_GET['adicionar-carrinho'])){
+
+				if(isset($_SESSION['login'])){
+					$idproduto = (int)$_GET['adicionar-carrinho'];
+
+					if(!isset($_SESSION['carrinho'])){
+						$_SESSION['carrinho'] = [];
+					}
+
+					$_SESSION['carrinho'][] = $idproduto;
+
+					Metodos::redirecionar(CAMINHO);
+				}
+			}	
 		}
 	}
 ?>

@@ -8,15 +8,17 @@
 		private static $login = 'paginas/template/login.php';
 		private static $footer = 'paginas/template/footer.php';
 		private static $footerPainel = 'paginas/template/footerPainel.php';
-		private static $modais = 'paginas/template/painel/modais.php';
+		private static $modal = 'paginas/template/engine/modal.php';
 
 		public static function renderizar($caminhoPagina,$data = null,$anotherData = null){
 			$header = self::$header;
 			$login = self::$login;
 			$footer = self::$footer;
+			$modal = self::$modal;
 
 			include($header);
 			include($login);
+			include($modal);
 			include('paginas/'.$caminhoPagina.'.php');
 			include($footer);
 			die();
@@ -25,10 +27,8 @@
 		public static function renderizarPainel($caminhoPagina,$data = null,$anotherData = null){
 			$headerPainel = self::$headerPainel;
 			$footerPainel = self::$footerPainel;
-			$modal = self::$modais;
 
 			include($headerPainel);
-			include($modal);
 			include('paginas/'.$caminhoPagina.'.php');
 			include($footerPainel);
 			die();

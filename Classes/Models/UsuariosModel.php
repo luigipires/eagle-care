@@ -15,5 +15,12 @@
 				return false;
 			}
 		}
+
+		public static function puxarDados($email){
+			$sql = MySql::conexaobd()->prepare("SELECT * FROM `usuarios` WHERE email = ?");
+			$sql->execute(array($email));
+
+			return $sql->fetch();
+		}
 	}
 ?>

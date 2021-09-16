@@ -1,9 +1,12 @@
 abrirMenuMobile();
 abrirModalLogin();
-fecharModalLogin();
+fecharModal();
 mostrarSenha();
 uploadArquivos();
 tooltip();
+feedbackFinalFormulario();
+formaPagamento();
+trocoPagamento();
 
 //================================================================
 // =============> abre o menu mobile
@@ -11,6 +14,12 @@ tooltip();
 function abrirMenuMobile(){
 	let icone_MenuMobile = document.querySelector('.menu-mobile');
 	let menuMobile = document.querySelector('.corpo-menu-mobile');
+
+	window.addEventListener('resize', () => {
+		if(window.innerWidth > 768){
+	    	menuMobile.style.display = 'none';
+		}
+	});
 
 	icone_MenuMobile.addEventListener('click', () => {
 		animacaoSlide(menuMobile,400);
@@ -34,7 +43,7 @@ function abrirModalLogin(){
 	}
 }
 
-function fecharModalLogin(){
+function fecharModal(){
 	let modal = document.querySelectorAll('.fechar-janela>img');
 	let telaLogin = document.querySelector('.tela-login');
 
@@ -42,9 +51,15 @@ function fecharModalLogin(){
 		for(let i = 0; i < modal.length; i++){
 			modal[i].addEventListener('click', () => {
 				fadeOut(telaLogin);
-				// $('.window-success').fadeOut();
-				// $('.window-warning').fadeOut();
+				fadeOut(document.querySelector('.janela-aviso'));
 				document.querySelector('body').style.overflow = 'auto';
+
+				let url = window.location.href;
+				let paramsURL = url.split(/[?]/);
+
+				if(paramsURL[1]){
+					location.href = paramsURL[0];
+				}
 			});
 		}
 	}
@@ -96,4 +111,56 @@ function tooltip(){
 	let texto_tooltip = document.querySelector('.text-tooltip>div');
 
 	hover(tooltip,texto_tooltip);
+}
+
+//================================================================
+// =============> verifica se tem a classe de feedback
+
+function feedbackFinalFormulario(){
+	const mensagem = document.querySelector('.sucesso-mensagem');
+
+	if(document.contains(mensagem) == true){
+		let url = window.location.href;
+		let lastUrl = url.split('/');
+
+		setTimeout(() => {
+			fadeOut(mensagem);
+
+			setTimeout(() => {
+				location.href = url;
+			},1500);
+		},2500);
+	}
+}
+
+//================================================================
+// =============> aparecer seções do método de pagamento
+
+function formaPagamento(){
+	let select = document.querySelector('select[name=formapagamento]');
+
+	select.addEventListener('change', (event) => {
+		let pagamento = event.target.value;
+
+		if(pagamento == 'dinheiro'){
+			document.querySelector('.aparece').style.display = 'block';
+			document.querySelector('.troco').style.display = 'block';
+		}else{
+			document.querySelector('.aparece').style.display = 'none';
+		}
+	});
+}
+
+function trocoPagamento(){
+	let select = document.querySelector('select[name=troco]');
+
+	select.addEventListener('change', (event) => {
+		let pagamento = event.target.value;
+
+		if(pagamento == 'sim'){
+			document.querySelector('.troco').style.display = 'block';
+		}else{
+			document.querySelector('.troco').style.display = 'none';
+		}
+	});
 }

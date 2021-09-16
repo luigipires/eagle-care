@@ -46,6 +46,11 @@ header .container .menu-desktop ul li a{
 	font-size: 17px;
 	color: #DCF0F2;
 }
+header .container .menu-desktop ul li i{
+	color: #DCF0F2;
+	padding-right: 5px;
+	font-size: 20px;
+}
 header .container .menu-desktop ul li a:hover{
 	text-decoration: underline;
 	font-size: 18px;
@@ -82,6 +87,11 @@ header .container .menu-mobile h3{
 .corpo-menu-mobile nav ul li:hover{
 	background-color: rgb(3, 160, 86);
 }
+.corpo-menu-mobile nav ul li i{
+	color: #DCF0F2;
+	padding-right: 5px;
+	font-size: 20px;
+}
 .corpo-menu-mobile nav ul li a{
 	color: #DCF0F2;
 	font-size: 17px;
@@ -112,14 +122,14 @@ header .container .menu-mobile h3{
 	padding: 20px 10px 30px 10px;
 	box-shadow: 15px 15px 30px 4px rgb(10, 10, 10);
 }
-.fechar-janela{
+.fundo-branco .fechar-janela{
 	width: 32px;
 	height: 32px;
 	position: absolute;
 	right: -15px;
 	top: -15px;
 }
-.fechar-janela>img{
+.fundo-branco .fechar-janela>img{
 	max-width: 100%;
 	cursor: pointer;
 }
@@ -427,6 +437,225 @@ header .container .menu-mobile h3{
 	top: 47.5px;
 }
 
+/**************** ofertas-farmacia ********************/
+
+.ofertas-farmacia{
+	background-color: #CCC;
+}
+.ofertas-farmacia .container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 60px 20px;
+}
+.ofertas-farmacia>h2{
+	font-size: 23px;
+	display: block;
+	width: 100%;
+	background-color: white;
+	color: #038C4C;
+	text-align: center;
+	padding: 20px;
+}
+.produtos-farmacia{
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+}
+.produto-solo{
+	width: calc(100% / 3);
+	padding: 15px 25px;
+}
+.produto{
+	width: 100%;
+	background-color: white;
+	box-shadow: 15px 15px 40px 0.1px rgba(10, 10, 10, 0.6);
+	min-height: 400px;
+	border-radius: 5px;
+}
+.produto .imagem-produto{
+	height: 250px;
+}
+.produto .imagem-produto>img{
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+.produto .dados-produto{
+	padding: 20px 30px;
+}
+.produto .dados-produto>h2{
+	font-size: 23px;
+	padding-bottom: 20px;
+	color: #909090;
+}
+.produto .dados-produto>h4{
+	font-size: 15px;
+	padding-bottom: 5px;
+	color: #909090;
+}
+.produto .dados-produto>h4>i{
+	font-size: 16px;
+	padding-right: 5px;
+}
+.produto .dados-produto>a{
+	background-color: #F24405;
+	color: #DCF0F2;
+	padding: 10px 15px;
+	border-radius: 5px;
+	margin: 30px auto 10px auto;
+	border: 0;
+	font-size: 17px;
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+.produto .dados-produto>a:hover{
+	background-color: #F15319;
+}
+
+/**************** finalização de pedido ********************/
+
+.finalizacao-pedido{
+	width: 80%;
+	margin: 0 auto;
+	padding: 35px 3%;
+}
+.finalizacao-pedido table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.finalizacao-pedido table tr:nth-of-type(1){
+	font-size: 20px;
+	color: white;
+	background-color: #038C4C;
+}
+.finalizacao-pedido table tr td{
+	text-align: center;
+	padding: 14px 0;
+	width: 150px;
+	border-top: 2px solid #02733E;
+}
+.finalizacao-pedido table tr{
+	font-size: 16.5px;
+}
+.finalizacao-pedido table tr td img{
+	max-width: 100%;
+	width: 150px;
+	height: 120px;
+}
+.finalizacao-pedido>h4{
+	margin-top: 20px;
+	font-size: 20px;
+	color: white;
+	text-align: right;
+	padding: 15px;
+	background-color: #038C4C;
+}
+
+.pagamento{
+	margin: 40px auto 0 auto;
+}
+.pagamento h2{
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	padding: 15px;
+	background-color: #038C4C;
+}
+.pagamento form{
+	padding: 20px 0;
+}
+.pagamento form div{
+	padding-bottom: 10px;
+}
+.pagamento form div:nth-of-type(2){
+	display: none;
+}
+.pagamento form div:nth-of-type(3){
+	display: none;
+}
+.pagamento form div p{
+	font-size: 19px;
+	text-align: center;
+	padding: 15px 0;
+	font-family: arial;
+	color: #02733E;
+}
+.pagamento form div select[name=formapagamento]{
+	width: 80%;
+	margin: 0 auto;
+	cursor: pointer;
+	outline: 0;
+	display: block;
+	font-size: 14px;
+	font-family: arial;
+	border:2px solid #02733E;
+	padding: 10px 5px;
+	border-radius: 6px;
+}
+.pagamento form div select[name=troco]{
+	width: 200px;
+	margin: 0 auto;
+	cursor: pointer;
+	outline: 0;
+	display: block;
+	font-size: 14px;
+	font-family: arial;
+	border:2px solid #02733E;
+	padding: 10px 5px;
+	border-radius: 6px;
+}
+.pagamento form div input[type=text]{
+	width: 200px;
+	height: 40px;
+	display: block;
+	font-size: 20px;
+	padding: 10px 5px;
+	outline: 0;
+	border-radius: 6px;
+	border:2px solid #02733E;
+	margin: 0 auto;
+}
+.pagamento form div input[type=submit]{
+	width: 150px;
+	height: 45px;
+	display: block;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	border-radius: 6px;
+	cursor: pointer;
+	border: 0;
+	font-family: arial;
+	background-color: #02733E;
+	margin: 20px auto;
+}
+.fechar a{
+	width: 180px;
+	height: 45px;
+	display: block;
+	padding-top: 10px;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	border-radius: 6px;
+	cursor: pointer;
+	border:2px solid #33951B;
+	font-family: arial;
+	background-color: #46CF25;
+	margin: 20px auto;
+}
+.fechar a:hover{
+	background-color: #4FE92A;
+	font-size: 20.5px;
+	padding-top: 9px;
+	border: 2px solid #277813;
+}
+.pagamento form div input[type=submit]:hover{
+	opacity: 0.9;
+}
+
 /**************** footer ********************/
 
 footer{
@@ -442,6 +671,63 @@ footer>.container>h2{
 	color: #DCF0F2;
 	text-align: center;
 	font-weight: lighter;
+}
+
+/**************** modal janela aviso ********************/
+
+.janela-aviso{
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display: none;
+	text-align: center;
+	padding: 70px 20px 30px 20px;
+}
+.janela-aviso>div{
+	background-color: white;
+	box-shadow: 15px 15px 30px 4px rgb(10, 10, 10);
+	width: 700px;
+	border-radius: 5px;
+	min-height: 350px;
+	display: inline-block;
+	z-index: 2;
+	text-align: center;
+	position: relative;
+	padding: 40px;
+}
+.janela-aviso .fechar-janela{
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	right: -15px;
+	top: -15px;
+}
+.janela-aviso .fechar-janela>img{
+	max-width: 100%;
+	cursor: pointer;
+}
+.janela-aviso>div>h3{
+	font-size: 160px;
+	color: #f9ab24;
+}
+.janela-aviso>div>p{
+	padding-top: 15px;
+	font-size: 26px;
+	color: #f9ab24;
+}
+.janela-aviso>div>a{
+	display: inline-block;
+	margin-top: 40px;
+	background-color: #F24405;
+	color: white;
+	font-size: 19px;
+	border-radius: 5px;
+	padding: 10px 15px;
+}
+.janela-aviso>div>a:hover{
+	opacity: 0.9;
 }
 
 /**************** mensagens de feedback ********************/
@@ -500,6 +786,19 @@ footer>.container>h2{
 
 /*************************************************/
 /*************** responsivo **********************/
+
+@media screen and (max-width: 835px){
+	.janela-aviso>div{
+		width: 80%;
+	}
+	.produto-solo{
+		width: 80%;
+		margin: 0 auto;
+	}
+	.produto .imagem-produto{
+		height: 350px;
+	}
+}
 
 @media screen and (max-width: 768px){
 	header .container .menu-desktop{

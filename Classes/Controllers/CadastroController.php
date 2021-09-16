@@ -2,7 +2,7 @@
 	namespace Classes\Controllers;
 
 	use Classes\Views\puxarViews;
-	use Classes\Bcrypt;
+	
 	use Classes\Metodos;
 	use Classes\MySql;
 
