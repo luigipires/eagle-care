@@ -44,7 +44,11 @@
 
 		private static function concluirPedido(){
 			if(isset($_GET['pedido-concluido'])){
-				session_unset();
+				unset($_SESSION['formapagamento']);
+				unset($_SESSION['trococliente']);
+				unset($_SESSION['carrinho']);
+				unset($_SESSION['valorpedido']);
+
 				Metodos::redirecionar(CAMINHO);
 			}
 		}
