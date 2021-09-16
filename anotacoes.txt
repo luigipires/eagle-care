@@ -1,6 +1,0 @@
-responsivo
-pagamento
-finalizar e listar pedidos
-css
-login
-refazer pastas
