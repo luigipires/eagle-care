@@ -551,6 +551,15 @@ header .container .menu-mobile h3{
 	padding: 15px;
 	background-color: #038C4C;
 }
+.finalizacao-pedido>h3{
+	margin-top: 20px;
+	font-size: 20px;
+	color: white;
+	font-weight: normal;
+	text-align: center;
+	padding: 15px;
+	background-color: #F24405;
+}
 
 .pagamento{
 	margin: 40px auto 0 auto;
@@ -630,7 +639,7 @@ header .container .menu-mobile h3{
 	background-color: #02733E;
 	margin: 20px auto;
 }
-.fechar a{
+.fechar-pedido a{
 	width: 180px;
 	height: 45px;
 	display: block;
@@ -641,16 +650,15 @@ header .container .menu-mobile h3{
 	text-align: center;
 	border-radius: 6px;
 	cursor: pointer;
-	border:2px solid #33951B;
+	border: 0;
 	font-family: arial;
-	background-color: #46CF25;
+	background-color: #F24405;
 	margin: 20px auto;
 }
-.fechar a:hover{
-	background-color: #4FE92A;
+.fechar-pedido a:hover{
+	opacity: 0.9;
 	font-size: 20.5px;
 	padding-top: 9px;
-	border: 2px solid #277813;
 }
 .pagamento form div input[type=submit]:hover{
 	opacity: 0.9;

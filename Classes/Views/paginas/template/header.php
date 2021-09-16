@@ -46,7 +46,17 @@
 				<ul>
 					<li>
 						<i class="fas fa-shopping-cart"></i>
+						<?php
+							if(isset($_SESSION['carrinho'])){
+						?>
 						<a href="<?php echo CAMINHO; ?>finalizar-pedido">Carrinho ( <?php echo count($_SESSION['carrinho']); ?> )</a>
+						<?php
+							}else{
+						?>
+						<a>Carrinho</a>
+						<?php
+							}
+						?>
 					</li>
 
 					<?php
@@ -76,7 +86,18 @@
 				<ul>
 					<li>
 						<i class="fas fa-shopping-cart"></i>
+
+						<?php
+							if(isset($_SESSION['carrinho'])){
+						?>
 						<a href="<?php echo CAMINHO; ?>finalizar-pedido">Carrinho ( <?php echo count($_SESSION['carrinho']); ?> )</a>
+						<?php
+							}else{
+						?>
+						<a>Carrinho</a>
+						<?php
+							}
+						?>
 					</li>
 					
 					<?php

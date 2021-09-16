@@ -143,10 +143,10 @@ function formaPagamento(){
 		let pagamento = event.target.value;
 
 		if(pagamento == 'dinheiro'){
-			document.querySelector('.aparece').style.display = 'block';
+			document.querySelector('.pergunta-troco').style.display = 'block';
 			document.querySelector('.troco').style.display = 'block';
 		}else{
-			document.querySelector('.aparece').style.display = 'none';
+			document.querySelector('.pergunta-troco').style.display = 'none';
 		}
 	});
 }

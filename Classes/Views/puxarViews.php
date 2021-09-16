@@ -24,16 +24,6 @@
 			die();
 		}
 
-		public static function renderizarPainel($caminhoPagina,$data = null,$anotherData = null){
-			$headerPainel = self::$headerPainel;
-			$footerPainel = self::$footerPainel;
-
-			include($headerPainel);
-			include('paginas/'.$caminhoPagina.'.php');
-			include($footerPainel);
-			die();
-		}
-
 		public static function renderizarErro($pagina){
 			$header = self::$header;
 			$login = self::$login;
@@ -43,16 +33,6 @@
 			include($login);
 			include('paginas/erro/'.$pagina.'.php');
 			include($footer);
-			die();
-		}
-
-		public static function renderizarErroPainel($caminhoPagina,$data = null){
-			$headerPainel = self::$headerPainel;
-			$footerPainel = self::$footerPainel;
-
-			include($headerPainel);
-			include('paginas/erro/'.$caminhoPagina.'.php');
-			include($footerPainel);
 			die();
 		}
 	}
